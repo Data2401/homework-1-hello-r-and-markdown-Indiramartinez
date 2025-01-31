@@ -13,11 +13,11 @@ MAKE SURE YOU READ AND FOLLOW **ALL** INSTRUCTIONS ON THE INSTRUCTION DOCUMENT.
 library(tidyverse) 
 library(datasauRus)
 ```
-
+instains
 
 ### Exercise 1
 
-(Type your answer to Exercise 1 here. This exercise does not require any R code. **Remove notes like this in the final product that you turn in**)
+Based on the help file, datasaurus_dozen has 1846 rows and 3 columns. The variables inculded in the data frame are dataset, x-values, and y-values.
 
 ### Exercise 2
 
