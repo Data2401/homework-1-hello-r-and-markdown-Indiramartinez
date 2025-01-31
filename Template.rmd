@@ -21,8 +21,6 @@ Based on the help file, datasaurus_dozen has 1846 rows and 3 columns. The variab
 
 ### Exercise 2
 
-(The answers for this Exercise are given for you below. But you should clean up some of the narrative so that it only includes what you want to turn in.)
-
 First let's plot the data in the dino dataset:
 
 ```{r plot-dino, fig.height=3, fig.width=6}
@@ -32,7 +30,7 @@ ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
 
-And next calculate the correlation between `x` and `y` in this dataset:
+Next calculate the correlation between `x` and `y` in this dataset:
 
 ```{r cor-dino}
 dino_data %>%
@@ -46,15 +44,17 @@ dino_data %>%
 
 
 ```{r plot-star}
-
-
+dino_data <- datasaurus_dozen %>%
+  filter(dataset == "star")
+ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 ```
 
-I'm some text, you should replace me with more meaningful text...
+Next calculate the correlation between `x` and `y` in this dataset:
  
 ```{r cor-star}
-
-
+dino_data %>%
+  summarize(r = cor(x, y))
 ```
 
 ### Exercise 4
@@ -62,7 +62,10 @@ I'm some text, you should replace me with more meaningful text...
 (Add code and narrative as needed. Note that two R chunks are given but they are not labeled. Use the convention from above to name them appropriately.)
 
 ```{r}
-
+dino_data <- datasaurus_dozen %>%
+  filter(dataset == "circle")
+ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 
 ```
 
